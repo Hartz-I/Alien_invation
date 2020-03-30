@@ -12,7 +12,9 @@ def run_game():
     ship=Ship(screen)
 
     while True:
-        gf.check_events()
+        gf.check_events(ship)
+
+        ship.update(ai_settings)
 
         screen.fill(ai_settings.bg_color)
 
